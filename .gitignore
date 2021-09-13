@@ -1,0 +1,14 @@
+material/
+src/
+node_modules/
+.DS_Store
+Thumbs.db
+package-lock.json
+.editorconfig
+.stylelintrc
+.idea
+*.sublime*
+*.log
+*.ai
+*.psd
+*.pdf
