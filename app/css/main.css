@@ -1,0 +1,233 @@
+.header__top {
+  box-shadow: 3px 3px 50px -15px var(--color-accent); }
+  .header__top .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-beetwen;
+    flex: 100%;
+    padding: 1rem; }
+
+.logo {
+  position: relative;
+  display: inline-block;
+  max-height: 5rem;
+  max-width: 100%;
+  margin-right: 2rem;
+  z-index: 1; }
+
+.link-nastenjka,
+.link-potanina {
+  position: relative;
+  z-index: 3; }
+
+.logo-nastenjka {
+  display: block;
+  max-width: 6.5rem;
+  max-height: 5rem; }
+
+.logo-potanina {
+  display: block;
+  max-width: 12.4rem;
+  max-height: 3.6rem;
+  margin-top: .8rem; }
+
+.burger {
+  display: none; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 100%; }
+
+.nav {
+  width: 100%;
+  margin-right: 2rem; }
+
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .3s ease; }
+  .nav__links li a:hover {
+    color: var(--color-accent);
+    padding-bottom: .2rem;
+    border-bottom: 2px solid currentColor;
+    transition: all .3s ease; }
+
+.header__bottom {
+  padding: 1rem;
+  width: 100%; }
+  .header__bottom .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start; }
+    .header__bottom .container .link-club-bridges {
+      color: var(--color-accent); }
+
+.link-club-bridges {
+  display: block;
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  white-space: nowrap; }
+
+.heder__bottom__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start; }
+  .heder__bottom__links li svg {
+    max-height: 5rem;
+    max-width: 13rem; }
+
+/* -------------------------- */
+/* -------------------------- */
+._lock {
+  overflow: hidden; }
+
+.burger-club-bridges {
+  display: none; }
+
+@media (max-width: 1269px) {
+  .burger {
+    display: block;
+    position: relative;
+    width: 1.6rem;
+    height: 1.4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 5; }
+    .burger span {
+      position: absolute;
+      background-color: var(--color-accent);
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 6px;
+      transition: all .3s ease; }
+    .burger::before, .burger::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: var(--color-accent);
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all .3s ease; }
+    .burger::before {
+      top: 0; }
+    .burger::after {
+      bottom: 0; }
+  .burger._active span {
+    transform: scale(0);
+    transition: all .3s ease; }
+  .burger._active::before {
+    top: 6px;
+    transform: rotate(-45deg);
+    transition: all .3s ease; }
+  .burger._active::after {
+    transform: rotate(45deg);
+    bottom: 6px;
+    transition: all .3s ease; }
+  .menu {
+    justify-content: flex-end; }
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    overflow: auto;
+    transition: all .3s ease 0s;
+    transform: translate(-100%, 0);
+    z-index: 2; }
+  .nav._active {
+    transform: translate(0, 0); }
+  .insert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    background-color: var(--color-white);
+    z-index: 3; }
+  .nav__links {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+    top: 7rem;
+    padding: 1rem;
+    font-size: 1.2rem; }
+    .nav__links li:not(:last-of-type) {
+      margin-bottom: 2rem; }
+    .nav__links li:last-of-type {
+      margin-bottom: 5rem; } }
+
+@media (max-width: 700px) {
+  .header__top {
+    box-shadow: none; }
+  .header__bottom {
+    display: none; }
+  .burger-club-bridges {
+    display: block;
+    position: relative;
+    top: 11rem; }
+    .burger-club-bridges div {
+      display: flex;
+      flex-direction: column;
+      justify-content: start; }
+      .burger-club-bridges div .link-club-bridges {
+        font-size: 1.2rem;
+        white-space: wrap;
+        color: var(--color-accent);
+        align-self: flex-start; }
+      .burger-club-bridges div ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; } }
+
+@media (max-width: 490px) {
+  .nav__links {
+    top: 11rem; } }
+
+.btn-donation {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-white);
+  letter-spacing: 1px;
+  padding: 1.5rem;
+  background-color: var(--color-button-donat);
+  border-radius: .5rem;
+  transition: all .3s ease 0s;
+  z-index: 3; }
+
+button {
+  box-shadow: 3px 3px 50px -15px var(--color-accent); }
+
+@media (max-width: 490px) {
+  .menu__btn {
+    position: absolute;
+    top: 7rem;
+    left: -100%;
+    transition: all .3s ease 0s; }
+  .menu__btn._active {
+    left: 1rem;
+    transition: all .3s ease 0s; } }
+
+/*# sourceMappingURL=main.css.map */
