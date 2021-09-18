@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header__top {
   box-shadow: 3px 3px 50px -15px var(--color-accent); }
   .header__top .container {
@@ -198,7 +199,142 @@
 
 @media (max-width: 490px) {
   .nav__links {
-    top: 11rem; } }
+    top: 11.5rem; } }
+
+.footer {
+  width: 100%;
+  border-top: 2px solid var(--color-main-dark); }
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem; }
+
+.amount,
+.social,
+.social__share,
+.social__networks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.amount {
+  margin-right: 2rem; }
+  .amount p {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-main-dark); }
+
+.amoun__money {
+  font-size: 2.4rem;
+  margin-left: 2rem;
+  color: var(--color-accent);
+  transform: translate(0, -2px); }
+  .amoun__money::after {
+    content: "₽";
+    display: inline-block; }
+
+.amoun__total {
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: .5;
+  margin-right: 2rem;
+  transform: translate(0, -2px); }
+  .amoun__total::before {
+    content: "/";
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .amoun__total::after {
+    content: "₽";
+    display: inline-block; }
+
+.amount__participants {
+  font-size: 2.4rem;
+  padding-left: 2rem;
+  color: var(--color-accent);
+  transform: translate(0, -2px); }
+
+.social button {
+  margin-right: 2rem; }
+
+.social ._icon-share {
+  font-size: 1.6rem;
+  padding: 13px 16px; }
+
+.social__networks {
+  margin-right: 2rem; }
+  .social__networks li:not(:last-of-type) {
+    margin-right: .5rem; }
+  .social__networks .btn-social {
+    color: var(--color-accent); }
+  .social__networks ._icon-vk {
+    font-size: 1.1rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1.4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem; }
+  .social__networks ._icon-facebook {
+    font-size: 1.5rem;
+    padding: 1.3rem 1.4rem; }
+  .social__networks ._icon-instagram {
+    font-size: 1.5rem;
+    padding: 1.3rem 1.4rem; }
+  .social__networks ._icon-youtube {
+    font-size: 1.9rem;
+    padding: 1.1rem 1.2rem; }
+
+@media (max-width: 1246px) {
+  .footer .container {
+    flex-direction: column; }
+  .amount {
+    margin-bottom: 1rem; } }
+
+@media (max-width: 700px) {
+  .social {
+    display: none; }
+  .burger-footer > .social {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    transform: translate(0, 11rem); }
+    .burger-footer > .social .btn-social {
+      margin: 0;
+      margin-bottom: 1.5rem; }
+    .burger-footer > .social .social__share {
+      margin-bottom: 1.5rem; }
+      .burger-footer > .social .social__share .btn-social {
+        margin: 0;
+        margin-right: 1rem; }
+      .burger-footer > .social .social__share ._icon-share {
+        font-size: 1.6rem;
+        padding: 12.5px 15px; } }
+
+@media (max-width: 598px) {
+  .amount {
+    margin: 0; }
+  .amount p {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start; }
+  .amount p :not(:last-of-type) {
+    margin-right: 5rem; }
+  .amount span {
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0; }
+  .amoun__total {
+    transform: translate(0, 0px); }
+    .amoun__total::before {
+      padding-left: 0rem; } }
 
 .btn-donation {
   display: flex;
@@ -219,6 +355,24 @@
 
 button {
   box-shadow: 3px 3px 50px -15px var(--color-accent); }
+
+.btn-social {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  border: 1.5px solid var(--color-accent);
+  border-radius: .5rem; }
+
+.btn-what {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  text-transform: uppercase;
+  border-radius: .5rem; }
 
 @media (max-width: 490px) {
   .menu__btn {

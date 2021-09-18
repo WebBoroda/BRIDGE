@@ -58,14 +58,20 @@ if (bntBurger.classList.contains('_active')) {
 
 //header__bottom
 const burgerClubBridges = document.querySelector('.burger-club-bridges');
-const clubBridges = document.querySelector('.club-bridges');
 const burgerFooter = document.querySelector('.burger-footer');
+const clubBridges = document.querySelector('.club-bridges');
+const social = document.querySelector('.social');
 
 if (burgerClubBridges) {
-  console.log(1);
-  let copyElement = clubBridges.cloneNode(true);
-  burgerClubBridges.append(copyElement);
-  console.log(2);
+  let copyClubBridges = clubBridges.cloneNode(true);
+  burgerClubBridges.append(copyClubBridges);
 }
+
+if (burgerFooter) {
+  let copySocial = social.cloneNode(true);
+  burgerFooter.append(copySocial);
+}
+
+
 
 //# sourceMappingURL=main.js.map
