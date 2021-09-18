@@ -288,6 +288,9 @@
     font-size: 1.9rem;
     padding: 1.1rem 1.2rem; }
 
+.burger-footer > .social {
+  display: none; }
+
 @media (max-width: 1246px) {
   .footer .container {
     flex-direction: column; }
