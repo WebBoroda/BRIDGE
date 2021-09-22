@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .header__top {
-  box-shadow: 3px 3px 50px -15px var(--color-accent); }
+  box-shadow: 3px 3px 20px -10px var(--color-accent); }
   .header__top .container {
     display: flex;
     align-items: center;
@@ -11,23 +11,24 @@
 .logo {
   position: relative;
   display: inline-block;
-  max-height: 5rem;
+  max-height: 3.5rem;
   max-width: 100%;
   margin-right: 2rem;
   z-index: 1; }
 
 .link-nastenjka,
 .link-potanina {
+  display: block;
   position: relative;
+  margin-right: 2rem;
+  height: 4rem;
   z-index: 3; }
 
 .logo-nastenjka {
-  display: block;
   max-width: 6.5rem;
-  max-height: 5rem; }
+  height: 4.5rem; }
 
 .logo-potanina {
-  display: block;
   max-width: 12.4rem;
   max-height: 3.6rem;
   margin-top: .8rem; }
@@ -81,21 +82,27 @@
 
 .heder__bottom__links {
   display: flex;
+  flex: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   overflow-y: hidden;
-  overflow-x: scroll; }
+  overflow-x: auto; }
   .heder__bottom__links::-webkit-scrollbar {
     height: 3px;
-    background-color: var(--color-white); }
+    background-color: var(--color-dark-rbga); }
   .heder__bottom__links::-webkit-scrollbar-thumb {
     height: 100%;
     background-color: var(--color-accent-rbga);
     opacity: 1; }
-  .heder__bottom__links li svg {
-    max-height: 5rem;
-    max-width: 13rem; }
+  .heder__bottom__links li a {
+    display: block;
+    height: 3.5rem;
+    width: auto; }
+  .heder__bottom__links .logo-potanina2 {
+    display: block;
+    height: 3.5rem;
+    width: 10rem; }
 
 /* -------------------------- */
 /* -------------------------- */
@@ -218,7 +225,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 1rem; }
+    padding: 1rem; }
 
 .amount,
 .social,
@@ -268,34 +275,32 @@
   color: var(--color-accent);
   transform: translate(0, -2px); }
 
-.social button {
-  margin-right: 2rem; }
+.social button:not(:nth-child(3)) {
+  margin-right: 1.6rem; }
 
 .social ._icon-share {
-  font-size: 1.6rem;
-  padding: 13px 16px; }
+  font-size: 1.5rem;
+  padding: 10px 12px; }
 
 .social__networks {
   margin-right: 2rem; }
   .social__networks li:not(:last-of-type) {
-    margin-right: .5rem; }
+    margin-right: .8rem; }
   .social__networks .btn-social {
     color: var(--color-accent); }
   .social__networks ._icon-vk {
     font-size: 1.1rem;
-    padding-top: 1.7rem;
-    padding-bottom: 1.4rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem; }
+    padding: 10px;
+    padding-top: 14px; }
   .social__networks ._icon-facebook {
     font-size: 1.5rem;
-    padding: 1.3rem 1.4rem; }
+    padding: 10px; }
   .social__networks ._icon-instagram {
     font-size: 1.5rem;
-    padding: 1.3rem 1.4rem; }
+    padding: 10px; }
   .social__networks ._icon-youtube {
-    font-size: 1.9rem;
-    padding: 1.1rem 1.2rem; }
+    font-size: 1.6rem;
+    padding: 9px; }
 
 .burger-footer > .social {
   display: none; }
@@ -319,14 +324,19 @@
     .burger-footer > .social .btn-social {
       margin: 0;
       margin-bottom: 1.5rem; }
+    .burger-footer > .social .social__networks,
+    .burger-footer > .social .social__networks li:not(:last-of-type) {
+      margin: 0; }
     .burger-footer > .social .social__share {
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.4rem; }
       .burger-footer > .social .social__share .btn-social {
         margin: 0;
         margin-right: 1rem; }
       .burger-footer > .social .social__share ._icon-share {
         font-size: 1.6rem;
-        padding: 12.5px 15px; } }
+        padding: 11px 14px; }
+      .burger-footer > .social .social__share ._icon-youtube {
+        margin: 0; } }
 
 @media (max-width: 598px) {
   .amount {
@@ -359,29 +369,25 @@
   white-space: nowrap;
   color: var(--color-white);
   letter-spacing: 1px;
-  padding: 1.5rem;
+  padding: 1.35em;
   background-color: var(--color-button-donat);
   border-radius: .5rem;
   transition: all .3s ease 0s;
   z-index: 3; }
 
-.btn-social {
+.btn-social,
+.btn-what {
   font-size: 1.2rem;
   font-weight: 700;
-  padding: 1.5rem;
+  padding: 1.1em 2em;
   color: var(--color-accent);
   text-transform: uppercase;
   border: 1.5px solid var(--color-accent);
   border-radius: .5rem; }
 
 .btn-what {
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 1.5rem;
   color: var(--color-white);
-  background-color: var(--color-accent);
-  text-transform: uppercase;
-  border-radius: .5rem; }
+  background-color: var(--color-accent); }
 
 @media (max-width: 490px) {
   .menu__btn {
